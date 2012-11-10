@@ -17,10 +17,10 @@ $('#page_cad_bugs').live('pageinit', function(event) {
     loadAllStatus;
 });
 
-var api = "http://localhost/WebServiceRestFulTeste/index.php/api/";
-var apiuser = "http://localhost/WebServiceRestFulTeste/index.php/api/AccountsRest/accounts";
-var apiprojeto = "http://localhost/WebServiceRestFulTeste/index.php/api/ProductsRest/products";
-var apistatus = "http://localhost/WebServiceRestFulTeste/index.php/api/EstatusRest/status";
+var api = "http://localhost/WebServiceSysBugs/index.php/api/";
+var apiuser = "http://localhost/WebServiceSysBugs/index.php/api/AccountsRest/accounts";
+var apiprojeto = "http://localhost/WebServiceSysBugs/index.php/api/ProductsRest/products";
+var apistatus = "http://localhost/WebServiceSysBugs/index.php/api/EstatusRest/status";
 
 
 var loadAllBugs = $(function() {     

@@ -11,7 +11,7 @@ $('#pageListStatus').live('pageinit', function(event) {
     loadAllStatus;        
 });
 
-var api = "http://localhost/WebServiceRestFulTeste/index.php/api/";
+var api = "http://localhost/WebServiceSysBugs/index.php/api/";
 var loadAllStatus = $(function() {     
     $.ajax({
         type : "GET",

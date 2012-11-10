@@ -15,3 +15,5 @@ Tecnologias.
 - utilizado a biblioteca PDO para comunicação com a base de dados, link http://www.php.net/manual/en/intro.pdo.php
 
  - Nosso cliente foi desenvolvido utilizando Jquery Mobile.
+
+ OBS: Na pasta SystemBugs esta a implementação do cliente em jquery mobile.

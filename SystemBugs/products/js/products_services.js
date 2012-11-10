@@ -11,7 +11,7 @@ $('#pageListProducts').live('pageinit', function(event) {
     loadAllProducts;        
 });
 
-var api = "http://localhost/WebServiceRestFulTeste/index.php/api/";
+var api = "http://localhost/WebServiceSysBugs/index.php/api/";
 var loadAllProducts = $(function() {     
     $.ajax({
         type : "GET",

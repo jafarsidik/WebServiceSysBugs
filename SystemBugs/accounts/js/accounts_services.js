@@ -11,7 +11,7 @@ $('#pageListAccounts').live('pageinit', function(event) {
     loadAllAccounts;        
 });
 
-var api = "http://localhost/WebServiceRestFulTeste/index.php/api/";
+var api = "http://localhost/WebServiceSysBugs/index.php/api/";
 var loadAllAccounts = $(function() {     
     $.ajax({
         type : "GET",
