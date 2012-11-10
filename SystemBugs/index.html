@@ -1,0 +1,32 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>Bug System - mobile</title> 
+        <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <link rel="stylesheet" type='text/css' media='all' href="jqm/css/themes/default/jquery.mobile-1.2.0.css"/>
+        <script src="jqm/js/jquery.js"></script>
+        <script src="jqm/js/jquery.mobile-1.2.0.min.js"></script>
+</head> 
+<body> 
+
+<div data-role="page">
+
+	<div data-role="header" data-theme="b">
+		<h1>Bug System - mobile</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">
+            <ul data-role="listview" data-inset="true">
+                <li data-role="list-divider">Menu</li>
+                <li><a href="accounts/list_accounts.html" data-ajax="false">Usuários</a></li>
+                <li><a href="products/list_products.html" data-ajax="false">Projetos</a></li>
+                <li><a href="status/list_status.html" data-ajax="false">Estatus</a></li>
+                <li><a href="bugs/list_bugs.html" data-ajax="false">Bugs</a></li>
+            </ul>
+	</div><!-- /content -->
+
+</div><!-- /page -->
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>Bug System - mobile - Cadastro de Usuario</title> 
+        <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <link rel="stylesheet" type='text/css' media='all' href="../jqm/css/themes/default/jquery.mobile-1.2.0.css"/>
+        <script src="../jqm/js/jquery.js"></script>
+        <script src="../jqm/js/jquery.mobile-1.2.0.min.js"></script>
+        <script src="js/accounts_services.js"></script>
+</head> 
+<body> 
+
+<div data-role="page" id="page_cad_user" data-add-back-btn="true">
+
+	<div data-role="header" data-theme="b">
+            <h1>Adiciona Usuário</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">
+            <form action='#' method='POST' id="fmradd">
+                <input type='text' id='name' name='name' value='' placeholder='Nome'/>
+                <input type='password' id='password' name='password' value='' placeholder='Senha'/>
+                <input id="btnAdd" type="button" value='Adicionar'/>
+            </form>
+	</div><!-- /content -->
+
+</div><!-- /page -->
+</body>
+</html>

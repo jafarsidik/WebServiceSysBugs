@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>Bug System - mobile - Cadastro de Bugs</title> 
+        <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <link rel="stylesheet" type='text/css' media='all' href="../jqm/css/themes/default/jquery.mobile-1.2.0.css"/>
+        <script src="../jqm/js/jquery.js"></script>
+        <script src="../jqm/js/jquery.mobile-1.2.0.min.js"></script>
+        <script src="js/bugs_services.js"></script>
+</head> 
+<body> 
+
+<div data-role="page" id="page_cad_bugs" data-add-back-btn="true">
+
+	<div data-role="header" data-theme="b">
+            <h1>Adiciona Usuário</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">
+            <form action='#' method='POST' id="fmradd">  
+                
+                <div data-role="fieldcontain" id="listprojeto">
+                    <label for="select-choice-1" class="select">Selecione o projeto:</label>
+                    <select name="projeto" id="projeto">
+                    </select>
+                </div>
+                
+                <div data-role="fieldcontain" id="listuser">
+                    <label for="select-choice-1" class="select">Selecione o usuário:</label>
+                    <select name="user" id="user">        
+                    </select>
+               </div>
+                
+                <div data-role="fieldcontain" id="liststatus">
+                    <label for="select-choice-1" class="select">Selecione o estatus:</label>
+                    <select name="estatus" id="estatus">
+                    </select>
+               </div>
+                
+                <div data-role="fieldcontain">
+                    <textarea cols="40" rows="8" name="description" id="description" placeholder='Descrição'></textarea>
+                </div>
+                
+                <input id="btnAdd" type="button" value='Adicionar'/>
+            </form>
+	</div><!-- /content -->
+
+</div><!-- /page -->
+</body>
+</html>
