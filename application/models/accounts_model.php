@@ -6,26 +6,25 @@
  */
 
 /**
- * Description of Bugs_Model
+ * Description of Accounts_Model
  *
  * @author Simão Neto
  */
-class Bugs extends CI_Model{
+class Accounts_Model extends CI_Model{
     //put your code here
     
     public function __construct() {
-        parent::__construct();
-        
+        parent::__construct();        
         $this->load->database();
     }
     
     public function loadAll(){
-        $query = $this->db->get('bugs');
+        $query = $this->db->get('accounts');
         return $query->result();
     }
     
-    public  function store($dados = array()){
-        $this->db->insert('bugs', $dados);
+    public function addAccount($data = array()){
+        $this->db->insert('accounts' , $data);
     }
 }
 

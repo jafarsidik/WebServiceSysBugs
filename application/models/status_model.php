@@ -6,11 +6,11 @@
  */
 
 /**
- * Description of Products_Model
+ * Description of Status_Model
  *
  * @author Simão Neto
  */
-class Products extends CI_Model{
+class Status_Model extends CI_Model{
     //put your code here
     
     public function __construct() {
@@ -19,16 +19,12 @@ class Products extends CI_Model{
     }
     
      public function loadAll(){
-        $query = $this->db->get('products');
-//        var_dump($query);
-//        print_r($query);
-        return $query->result();        
-            
-
+        $query = $this->db->get('status');
+        return $query->result();
     }
     
     public  function store($dados = array()){
-        $this->db->insert('products', $dados);
+        $this->db->insert('status', $dados);
     }
 }
 

@@ -17,11 +17,11 @@ class ProductsRest extends REST_Controller{
     
      public function __construct() {
         parent::__construct();
-        $this->load->model('products');
+        $this->load->model('products_model');
     }
     
     public function products_get(){
-        $products = $this->products->loadAll();
+        $products = $this->products_model->loadAll();
         if ($products){
             $this->response($products, 200);
         } else {
@@ -33,7 +33,7 @@ class ProductsRest extends REST_Controller{
         $data =  array(
             'name' => $this->input->post('name'),
         );        
-        $myDados = $this->products->store($data);        
+        $myDados = $this->products_model->store($data);        
         $this->response($myDados, 200);
     }
 }

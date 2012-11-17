@@ -12,15 +12,15 @@
  */
 require APPPATH.'/libraries/REST_Controller.php';
 
-class EstatusRest extends REST_Controller{
+class StatusRest extends REST_Controller{
     
      public function __construct() {
         parent::__construct();
-        $this->load->model('estatus');
+        $this->load->model('status_model');
     }
     
     public function status_get(){
-        $status = $this->estatus->loadAll();
+        $status = $this->status_model->loadAll();
         
         if ($status){
             $this->response($status, 200);
@@ -33,7 +33,7 @@ class EstatusRest extends REST_Controller{
         $data =  array(
             'name' => $this->input->post('name'),
         );        
-        $myDados = $this->estatus->store($data);        
+        $myDados = $this->status_model->store($data);        
         $this->response($myDados, 200);
     }
 }

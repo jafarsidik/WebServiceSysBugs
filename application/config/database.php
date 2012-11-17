@@ -43,8 +43,11 @@ $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'root';
+//$db['default']['username'] = 'simao';
+//$db['default']['password'] = 'tryon2012';
 $db['default']['password'] = '';
 $db['default']['database'] = 'bugssystem';
+//$db['default']['database'] = 'simao_bugssystem';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;

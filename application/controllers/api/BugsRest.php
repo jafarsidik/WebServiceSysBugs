@@ -16,11 +16,11 @@ class BugsRest extends REST_Controller{
     
     public function __construct() {
         parent::__construct();
-        $this->load->model('bugs');
+        $this->load->model('bugs_model');
     }
     
      public function bugs_get(){
-        $bugs = $this->bugs->loadAll();
+        $bugs = $this->bugs_model->loadAll();
         
         if ($bugs){
             $this->response($bugs, 200);
@@ -38,7 +38,7 @@ class BugsRest extends REST_Controller{
         );      
         
         var_dump($data);
-        $myDados = $this->bugs->store($data);        
+        $myDados = $this->bugs_model->store($data);        
         $this->response($myDados, 200);
     }
 }
