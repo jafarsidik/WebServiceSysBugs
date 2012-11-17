@@ -8,23 +8,21 @@
         <link rel="stylesheet" type='text/css' media='all' href="../jqm/css/themes/default/jquery.mobile-1.2.0.css"/>
         <script src="../jqm/js/jquery.js"></script>
         <script src="../jqm/js/jquery.mobile-1.2.0.min.js"></script>
-        <script src="js/products_services.js"></script>
+        <script src="js/accounts_services.js"></script>
 </head> 
 <body> 
 
-<div data-role="page" id="page_cad_produtcts" data-add-back-btn="true">
+<div data-role="dialog">
+    
+        <div data-role="header" data-theme="d">
+            <h1>Atenção</h1>
 
-	<div data-role="header" data-theme="b">
-            <h1>Cadastro de Projeto</h1>
-	</div><!-- /header -->
+        </div>
 
-	<div data-role="content">
-            <form action='#' method='POST' id="fmradd">
-                <input type='text' id='name' name='name' value='' placeholder='Nome'/>
-                <input id="btnAdd" type="button" value='Adicionar'/>
-            </form>
-	</div><!-- /content -->
-
-</div><!-- /page -->
+        <div data-role="content" data-theme="c">
+            <h1>Error ao salvar registro!</h1>
+            <a href="list_bugs.html" data-ajax="false" data-role="button" data-theme="b">OK</a>       
+        </div>
+    </div>
 </body>
 </html>

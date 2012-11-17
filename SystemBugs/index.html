@@ -13,17 +13,15 @@
 <div data-role="page">
 
 	<div data-role="header" data-theme="b">
-		<h1>Bug System - mobile</h1>
+            <h1>Login de Usuário</h1>
 	</div><!-- /header -->
 
 	<div data-role="content">
-            <ul data-role="listview" data-inset="true">
-                <li data-role="list-divider">Menu</li>
-                <li><a href="accounts/list_accounts.html" data-ajax="false">Usuários</a></li>
-                <li><a href="products/list_products.html" data-ajax="false">Projetos</a></li>
-                <li><a href="status/list_status.html" data-ajax="false">Estatus</a></li>
-                <li><a href="bugs/list_bugs.html" data-ajax="false">Bugs</a></li>
-            </ul>
+            <form action='#' method='POST' id="fmradd">
+                <input type='text' id='name' name='name' value='' placeholder='Nome'/>
+                <input type='password' id='password' name='password' value='' placeholder='Senha'/>
+                <input id="btnAdd" type="button" value='OK'/>
+            </form>
 	</div><!-- /content -->
 
 </div><!-- /page -->

@@ -36,8 +36,6 @@ class BugsRest extends REST_Controller{
             'idStatus' => $this->input->post('estatus'),
             'description' => $this->input->post('description')
         );      
-        
-        var_dump($data);
         $myDados = $this->bugs_model->store($data);        
         $this->response($myDados, 200);
     }

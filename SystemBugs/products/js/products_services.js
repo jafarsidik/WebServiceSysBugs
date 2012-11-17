@@ -11,7 +11,9 @@ $('#pageListProducts').live('pageinit', function(event) {
     loadAllProducts;        
 });
 
-var api = "http://localhost/WebServiceSysBugs/index.php/api/";
+var api = "http://simaomenezes.com/webservice/WebServiceSysBugs/index.php/api/";
+
+//var api = "http://localhost/WebServiceSysBugs/index.php/api/";
 var loadAllProducts = $(function() {     
     $.ajax({
         type : "GET",
@@ -21,7 +23,7 @@ var loadAllProducts = $(function() {
         processData : false,
         success : manipulateXml,
         error : function(callback) {
-            alert('error: ' + callback);
+//            alert('error: ' + callback);
         }
     });
 });
@@ -47,10 +49,11 @@ $(document).bind('pageinit',function() {
             processData : false,
             success : function(response) {
                 console.log("salvo");
-                $.mobile.changePage( "../products/list_products.html", { transition: "slideup"} );
+                $.mobile.changePage( "msg_ok.html", "data-inline='true' data-rel='dialog' data-transition='slidedown'", { transition: "slideup"} );
             },
             error : function() {
                 console.log("erro");
+                $.mobile.changePage( "msg_erro.html", "data-inline='true' data-rel='dialog' data-transition='slidedown'", { transition: "slideup"} );
             }
         });
     });

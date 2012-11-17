@@ -11,17 +11,19 @@ $('#pageListStatus').live('pageinit', function(event) {
     loadAllStatus;        
 });
 
-var api = "http://localhost/WebServiceSysBugs/index.php/api/";
+var api = "http://simaomenezes.com/webservice/WebServiceSysBugs/index.php/api/";
+
+//var api = "http://localhost/WebServiceSysBugs/index.php/api/";
 var loadAllStatus = $(function() {     
     $.ajax({
         type : "GET",
-        url : api + "EstatusRest/status",
+        url : api + "StatusRest/status",
         dataType : "xml",
         contentType : 'application/xml',
         processData : false,
         success : manipulateXml,
         error : function(callback) {
-            alert('error: ' + callback);
+//            alert('error: ' + callback);
         }
     });
 });
@@ -40,17 +42,18 @@ $(document).bind('pageinit',function() {
     $('#btnAdd').click(function() {
         $.ajax({
             type : 'POST',
-            url : api + "EstatusRest",
+            url : api + "StatusRest",
             dataType : "xml",
             data : $('#fmradd').serialize(),
             contentType : 'application/x-www-form-urlencoded, xml',
             processData : false,
             success : function(response) {
                 console.log("salvo");
-                $.mobile.changePage( "../status/list_status.html", { transition: "slideup"} );
+                $.mobile.changePage( "msg_ok.html", "data-inline='true' data-rel='dialog' data-transition='slidedown'", { transition: "slideup"} );
             },
             error : function() {
                 console.log("erro");
+                $.mobile.changePage( "msg_erro.html", "data-inline='true' data-rel='dialog' data-transition='slidedown'", { transition: "slideup"} );
             }
         });
     });
