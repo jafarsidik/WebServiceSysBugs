@@ -20,11 +20,7 @@ class Products_Model extends CI_Model{
     
      public function loadAll(){
         $query = $this->db->get('products');
-//        var_dump($query);
-//        print_r($query);
         return $query->result();        
-            
-
     }
     
     public  function store($dados = array()){
